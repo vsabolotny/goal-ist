@@ -1,20 +1,22 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-const GoalItem = (props) => {
-    return (
-    <View key={Math.random().toString(36).substr(2, 9)} style={styles.listItem}>
-      <Text>{props.Goal}</Text>
+const GoalItem = props => {
+  return (
+    <View style={styles.listItem}>
+      <Text>{props.title}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   listItem: {
-    padding: 5,
-    marginVertical: 5,
-    backgroundColor: "#CCC",
-  },
+    padding: 10,
+    marginVertical: 10,
+    backgroundColor: '#ccc',
+    borderColor: 'black',
+    borderWidth: 1
+  }
 });
 
 export default GoalItem;
